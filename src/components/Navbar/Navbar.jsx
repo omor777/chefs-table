@@ -32,7 +32,9 @@ function Navbar(props) {
         </ul>
         <div className="flex items-center gap-4">
           <label className="input  rounded-full flex items-center gap-2 bg-gray-100">
-            <IoIosSearch />
+            <span className="text-2xl">
+              <IoIosSearch />
+            </span>
             <input
               className="placeholder:text-black-600"
               type="text"

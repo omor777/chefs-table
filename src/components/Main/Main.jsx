@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function Main() {
   const [recipes, setRecipes] = useState([]);
+ const [cookingRecipe,setCookingRecipe] = useState([])
 
   const handleAddToCook = (recipe) => {
     const isExist = recipes.find((r) => r.id === recipe.id);
@@ -18,6 +19,13 @@ function Main() {
       return toast.warning("Already Exist!");
     }
   };
+
+  const handleAddToCooking = (curRecipe) => {
+    setCookingRecipe([...cookingRecipe,curRecipe])
+    setRecipes(recipes.filter((r) => r.id !== curRecipe.id));
+  };
+
+  console.log(cookingRecipe);
 
   return (
     <main className="container">
@@ -34,7 +42,11 @@ function Main() {
       </div>
       <div className="grid grid-cols-12 gap-6 mt-12">
         <Recipes handleAddToCook={handleAddToCook} />
-        <Cart recipes={recipes} />
+        <Cart
+          cookingRecipe={cookingRecipe}
+          handleAddToCooking={handleAddToCooking}
+          recipes={recipes}
+        />
       </div>
       <ToastContainer />
     </main>

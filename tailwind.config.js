@@ -14,6 +14,7 @@ export default {
       },
       fontSize: {
         32: "2rem",
+        52: "3.25rem",
       },
       colors: {
         main: "#0BE58A",
@@ -24,7 +25,7 @@ export default {
           900: "#150B2B",
         },
         gray: {
-          100:'#150B2B0D',
+          100: "#150B2B0D",
           600: "#878787",
         },
       },

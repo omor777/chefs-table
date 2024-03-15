@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { IoIosSearch } from "react-icons/io";
 import { FaUser } from "react-icons/fa6";
+import user from "../../assets/user1.png";
 function Navbar(props) {
   return (
     <>
@@ -38,10 +39,8 @@ function Navbar(props) {
               placeholder="Search"
             />
           </label>
-          <button className="bg-main size-10 rounded-full flex items-center justify-center">
-            <span className="text-xl">
-              <FaUser />
-            </span>
+          <button className="bg-main p-2 rounded-full">
+            <img src={user} />
           </button>
         </div>
       </nav>

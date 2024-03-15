@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { LuClock3 } from "react-icons/lu";
 import { FaFire } from "react-icons/fa";
 
-function Recipe({ recipe }) {
+function Recipe({ recipe, handleAddToCook }) {
   const {
     id,
     recipe_name,
@@ -13,7 +13,7 @@ function Recipe({ recipe }) {
     preparing_time,
     calories,
   } = recipe;
-  console.table(recipe);
+//   console.table(recipe);
   return (
     <div className="p-6 rounded-2xl border border-[#28282833]">
       <img
@@ -51,7 +51,10 @@ function Recipe({ recipe }) {
             {calories} calories
           </p>
         </div>
-        <button className="text-lg mt-6 font-medium py-3 px-6 rounded-full bg-main text-black-900">
+        <button
+          onClick={() => handleAddToCook(recipe)}
+          className="text-lg mt-6 font-medium py-3 px-6 rounded-full bg-main text-black-900"
+        >
           Want to Cook
         </button>
       </div>

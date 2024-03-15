@@ -1,9 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Banner from "../Banner/Banner";
 import Recipes from "../Recipes/Recipes";
 import Cart from "../Cart/Cart";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 function Main() {
+  const [recipes, setRecipes] = useState([]);
+
+  const handleAddToCook = (recipe) => {
+    const isExist = recipes.find((r) => r.id === recipe.id);
+    if (!isExist) {
+      toast.success("Successfully added");
+      setRecipes([...recipes, recipe]);
+    } else {
+      return toast.warning("Already Exist!");
+    }
+  };
+
   return (
     <main className="container">
       <Banner />
@@ -18,9 +33,10 @@ function Main() {
         </p>
       </div>
       <div className="grid grid-cols-12 gap-6 mt-12">
-        <Recipes />
-        <Cart />
+        <Recipes handleAddToCook={handleAddToCook} />
+        <Cart recipes={recipes} />
       </div>
+      <ToastContainer />
     </main>
   );
 }

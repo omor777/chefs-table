@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "recipe_name": "Classic Spaghetti Carbonara",
+    "recipe_img": "../src/assets/spaghetti_carbonara.jpg",
+    "short_description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
+    "ingredients": ["spaghetti", "eggs", "pancetta", "Parmesan cheese", "black pepper"],
+    "preparing_time": "30 minutes",
+    "calories": 450
+  },
+  {
+    "id": 2,
+    "recipe_name": "Grilled Lemon Herb Chicken",
+    "recipe_img": "../src/assets/grilled_chicken.jpg",
+    "short_description": "Juicy grilled chicken marinated in a blend of lemon, herbs, and garlic.",
+    "ingredients": ["chicken breasts", "lemon", "olive oil", "garlic", "rosemary"],
+    "preparing_time": "25 minutes",
+    "calories": 320
+  },
+  {
+    "id": 3,
+    "recipe_name": "Vegetarian Chickpea Curry",
+    "recipe_img": "../src/assets/chickpea_curry.jpg",
+    "short_description": "A flavorful vegetarian curry made with chickpeas, tomatoes, and aromatic spices.",
+    "ingredients": ["chickpeas", "tomatoes", "onion", "garlic", "curry powder"],
+    "preparing_time": "40 minutes",
+    "calories": 280
+  },
+  {
+    "id": 4,
+    "recipe_name": "Caprese Salad",
+    "recipe_img": "../src/assets/caprese_salad.jpg",
+    "short_description": "A refreshing Italian salad made with tomatoes, mozzarella, basil, and balsamic glaze.",
+    "ingredients": ["tomatoes", "mozzarella cheese", "fresh basil", "balsamic glaze"],
+    "preparing_time": "15 minutes",
+    "calories": 180
+  },
+  {
+    "id": 5,
+    "recipe_name": "Homemade Pizza",
+    "recipe_img": "../src/assets/homemade_pizza.jpg",
+    "short_description": "Delicious homemade pizza topped with tomato sauce, cheese, and your favorite toppings.",
+    "ingredients": ["pizza dough", "tomato sauce", "mozzarella cheese", "pepperoni", "bell peppers", "mushrooms"],
+    "preparing_time": "45 minutes",
+    "calories": 380
+  },
+  {
+    "id": 6,
+    "recipe_name": "Banana Walnut Bread",
+    "recipe_img": "../src/assets/banana_bread.jpg",
+    "short_description": "A moist and flavorful banana bread studded with walnuts, perfect for breakfast or snacking.",
+    "ingredients": ["bananas", "walnuts", "flour", "eggs", "sugar", "baking powder"],
+    "preparing_time": "60 minutes",
+    "calories": 220
+  }
+]

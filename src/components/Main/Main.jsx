@@ -1,19 +1,18 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
 import Banner from "../Banner/Banner";
 import Recipes from "../Recipes/Recipes";
 import Cart from "../Cart/Cart";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-function Main() {
+function Main({ isMenuOpen }) {
   const [recipes, setRecipes] = useState([]);
- const [cookingRecipe,setCookingRecipe] = useState([])
+  const [cookingRecipe, setCookingRecipe] = useState([]);
 
   const handleAddToCook = (recipe) => {
     const isExist = recipes.find((r) => r.id === recipe.id);
     if (!isExist) {
-      toast.success("Successfully added");
+      toast.success("Recipe added");
       setRecipes([...recipes, recipe]);
     } else {
       return toast.warning("Already Exist!");
@@ -21,15 +20,15 @@ function Main() {
   };
 
   const handleAddToCooking = (curRecipe) => {
-    setCookingRecipe([...cookingRecipe,curRecipe])
+    setCookingRecipe([...cookingRecipe, curRecipe]);
     setRecipes(recipes.filter((r) => r.id !== curRecipe.id));
   };
 
-  console.log(cookingRecipe);
-
   return (
-    <main className="container">
-      <Banner />
+    <main className="container px-4 lg:px-0">
+      <div className={`duration-300 ${isMenuOpen ? "mt-24" : ""}`}>
+        <Banner />
+      </div>
       <div className="mt-24">
         <h3 className="text-[40px] font-semibold text-black-900 text-center">
           Our Recipes
@@ -52,7 +51,5 @@ function Main() {
     </main>
   );
 }
-
-Main.propTypes = {};
 
 export default Main;

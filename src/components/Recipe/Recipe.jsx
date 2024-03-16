@@ -13,7 +13,7 @@ function Recipe({ recipe, handleAddToCook }) {
     preparing_time,
     calories,
   } = recipe;
-//   console.table(recipe);
+  //   console.table(recipe);
   return (
     <div className="p-6 rounded-2xl border border-[#28282833]">
       <img
@@ -42,7 +42,7 @@ function Recipe({ recipe, handleAddToCook }) {
             <span className="text-xl">
               <LuClock3 />
             </span>
-            {preparing_time}
+            {preparing_time} minute
           </p>
           <p className="flex items-center gap-3 text-[#282828CC]">
             <span className="text-xl">
@@ -62,6 +62,9 @@ function Recipe({ recipe, handleAddToCook }) {
   );
 }
 
-Recipe.propTypes = {};
+Recipe.propTypes = {
+  recipe: PropTypes.object.isRequired,
+  handleAddToCook: PropTypes.func.isRequired,
+};
 
 export default Recipe;

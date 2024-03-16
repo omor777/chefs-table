@@ -25,6 +25,8 @@ function Recipes({ handleAddToCook }) {
   );
 }
 
-Recipes.propTypes = {};
+Recipes.propTypes = {
+  handleAddToCook: PropTypes.func.isRequired,
+};
 
 export default Recipes;

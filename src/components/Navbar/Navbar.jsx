@@ -1,9 +1,8 @@
 import { IoIosSearch } from "react-icons/io";
-import user from "../../assets/user1.png";
 import { FaUser } from "react-icons/fa6";
 import Mobile_Nav from "./Mobile_Nav";
 import { RiMenu2Line } from "react-icons/ri";
-import { useState } from "react";
+import PropTypes from "prop-types";
 function Navbar({ handleToggleMenu, isMenuOpen }) {
   return (
     <>
@@ -51,12 +50,17 @@ function Navbar({ handleToggleMenu, isMenuOpen }) {
           </button>
         </div>
         <Mobile_Nav isMenuOpen={isMenuOpen} />
-        <button onClick={handleToggleMenu} className="text-2xl lg:hidden">
+        <button onClick={handleToggleMenu} className="text-3xl lg:hidden">
           <RiMenu2Line />
         </button>
       </nav>
     </>
   );
 }
+
+Navbar.propTypes = {
+  handleToggleMenu: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired,
+};
 
 export default Navbar;

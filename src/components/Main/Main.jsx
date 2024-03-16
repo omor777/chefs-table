@@ -4,6 +4,7 @@ import Recipes from "../Recipes/Recipes";
 import Cart from "../Cart/Cart";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import PropTypes from "prop-types";
 
 function Main({ isMenuOpen }) {
   const [recipes, setRecipes] = useState([]);
@@ -34,9 +35,9 @@ function Main({ isMenuOpen }) {
           Our Recipes
         </h3>
         <p className="leading-[26px] text-black-600 w-full max-w-[823px] text-center mx-auto">
-          Lorem ipsum dolor sit amet consectetur. Proin et feugiat senectus
-          vulputate netus pharetra rhoncus. Eget urna volutpat curabitur
-          elementum mauris aenean neque.{" "}
+          Explore a world of culinary delights with our curated collection of
+          recipes. From appetizers to desserts, find inspiration for every meal
+          in our comprehensive recipe archive.{" "}
         </p>
       </div>
       <div className="grid grid-cols-12 gap-6 mt-12">
@@ -51,5 +52,9 @@ function Main({ isMenuOpen }) {
     </main>
   );
 }
+
+Main.propTypes = {
+  isMenuOpen: PropTypes.bool.isRequired,
+};
 
 export default Main;

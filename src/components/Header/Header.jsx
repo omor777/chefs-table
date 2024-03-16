@@ -10,6 +10,9 @@ function Header({ handleToggleMenu, isMenuOpen }) {
   );
 }
 
-Header.propTypes = {};
+Header.propTypes = {
+  handleToggleMenu: PropTypes.func.isRequired,
+  isMenuOpen: PropTypes.bool.isRequired,
+};
 
 export default Header;

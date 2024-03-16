@@ -12,7 +12,7 @@ function Recipes({ handleAddToCook }) {
   }, []);
   return (
     <section className="col-span-12 lg:col-span-7">
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {recipes.map((recipe) => (
           <Recipe
             handleAddToCook={handleAddToCook}

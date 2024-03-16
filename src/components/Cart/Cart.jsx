@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 function Cart({ recipes, handleAddToCooking, cookingRecipe }) {
@@ -9,8 +8,8 @@ function Cart({ recipes, handleAddToCooking, cookingRecipe }) {
           Want to cook: {recipes.length}
         </h4>
         <div className="divider w-2/3 mx-auto"></div>
-        <div className="overflow-x-auto">
-          <table className="table-sm lg:table w-full">
+        <div  className="overflow-x-auto">
+          <table className="table">
             <thead>
               <tr>
                 <th></th>
@@ -32,7 +31,7 @@ function Cart({ recipes, handleAddToCooking, cookingRecipe }) {
                       onClick={() => {
                         handleAddToCooking(recipe);
                       }}
-                      className="bg-main py-2 px-4 lg:px-[18px] lg:py-[9px] rounded-full text-sm lg:text-base font-medium text-black-900"
+                      className="btn btn-sm md:btn-md bg-main hover:bg-main rounded-full border-none hover:border-none"
                     >
                       Preparing
                     </button>
@@ -47,7 +46,7 @@ function Cart({ recipes, handleAddToCooking, cookingRecipe }) {
           Currently cooking: {cookingRecipe.length}
         </h4>
         <div className="divider w-2/3 mx-auto"></div>
-        <table className="table-sm  lg:table w-full">
+        <table className="table">
           <thead>
             <tr>
               <th></th>

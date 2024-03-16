@@ -1,4 +1,3 @@
-import React from "react";
 import PropTypes from "prop-types";
 import { LuClock3 } from "react-icons/lu";
 import { FaFire } from "react-icons/fa";
@@ -53,7 +52,7 @@ function Recipe({ recipe, handleAddToCook }) {
         </div>
         <button
           onClick={() => handleAddToCook(recipe)}
-          className="text-lg mt-6 font-medium py-3 px-6 rounded-full bg-main text-black-900"
+          className="btn bg-main rounded-full mt-6 hover:bg-main border-main hover:border-main"
         >
           Want to Cook
         </button>

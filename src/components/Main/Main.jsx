@@ -30,7 +30,7 @@ function Main({ isMenuOpen }) {
         <Banner />
       </div>
       <div className="mt-24">
-        <h3 className="text-[40px] font-semibold text-black-900 text-center">
+        <h3 className="text-[clamp(30px,4vw,40px)] font-semibold text-black-900 text-center">
           Our Recipes
         </h3>
         <p className="leading-[26px] text-black-600 w-full max-w-[823px] text-center mx-auto">

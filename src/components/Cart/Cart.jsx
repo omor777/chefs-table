@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 function Cart({ recipes, handleAddToCooking, cookingRecipe }) {
   return (
-    <section className="col-span-5">
+    <section className="col-span-12 lg:col-span-5">
       <div className="border border-[#28282833] rounded-2xl py-8">
         <h4 className="text-2xl font-semibold text-black-900 text-center ">
           Want to cook: {recipes.length}
